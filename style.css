@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c9c9c9;
+}
+
+#stats-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 20px;
+    color: black;
+    font-size: 26px;
+}
+
+#image-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.image {
+    background-color: rgba(0, 0, 0);
+    width: 120px;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 100%;
+}
+
+#result-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}

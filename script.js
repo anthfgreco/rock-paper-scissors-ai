@@ -50,19 +50,55 @@ document.addEventListener('keydown', (event) => {
     }
   }, false);
 
+$( "#rock-div" ).click(function() {
+    player_move = 1;
+    play_round(player_move);
+});
+
+$( "#paper-div" ).click(function() {
+    player_move = 2;
+    play_round(player_move);
+});
+
+$( "#scissors-div" ).click(function() {
+    player_move = 3;
+    play_round(player_move);
+});
 
 function play_round(player_move) {
+    if (agent_move == 1) {
+        $( "#agent-rock-div" ).show();
+        $( "#agent-paper-div" ).hide();
+        $( "#agent-scissors-div" ).hide();
+    }
+    if (agent_move == 2) {
+        $( "#agent-rock-div" ).hide();
+        $( "#agent-paper-div" ).show();
+        $( "#agent-scissors-div" ).hide();
+    }
+    if (agent_move == 3) {
+        $( "#agent-rock-div" ).hide();
+        $( "#agent-paper-div" ).hide();
+        $( "#agent-scissors-div" ).show();
+    }
+
     if (agent_move == player_move) {
+        $( "#result-p" ).text("Tie!");
         console.log('Tie!');
         games_tied++;
+        $( "#games-tied-div" ).text("Games Tied: " + games_tied);
     }
     else if ((agent_move == 1 && player_move == 2) || (agent_move == 2 && player_move == 3) || (agent_move == 3 && player_move == 1)) {
+        $( "#result-p" ).text("You win!");
         console.log('You win!');
         games_won++;
+        $( "#games-won-div" ).text("Games Won: " + games_won);
     }
     else {
+        $( "#result-p" ).text("You lose!");
         console.log('You lose!')
         games_lost++;;
+        $( "#games-lost-div" ).text("Games Lost: " + games_lost);
     }
 
     games_played++;
