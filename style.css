@@ -1,9 +1,27 @@
+:root {
+    --html-background: #fff;
+    --h1-color: #52489c;
+    --text: rgb(45, 45, 45);
+    --image-background: #c9c6e4;
+    --image-background-hover: #5e53b3;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #c9c9c9;
+    background-color: var(--html-background);
+    color: var(--text);
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: var(--h1-color);
 }
 
 #stats-div {
@@ -13,10 +31,9 @@ html, body {
     justify-content: center;
 }
 
-p {
+p, output {
     margin: 20px;
-    color: black;
-    font-size: 26px;
+    font-size: 1.5em;
 }
 
 .image-div {
@@ -25,20 +42,30 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    background-color: blue;
 }
 
-.image {
-    background-color: rgba(0, 0, 0);
+.agent-image-background, .user-image-background {
+    background-color: var(--image-background);
     width: 120px;
     height: 120px;
     padding: 30px;
     margin: 15px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
-#agent-rock-div, #agent-paper-div, #agent-scissors-div {
+.agent-image-background {
     display: none;
+}
+
+
+.user-image-background:hover {
+    transition: .15s ease;
+    background-color: var(--image-background-hover);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
 }
 
 #result-div {
@@ -54,12 +81,95 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    background-color: blueviolet;
 }
 
-output {
-    width: 10px;
-    margin: 20px;
-    color: black;
-    font-size: 26px;
-}
+input[type=range] {
+    height: 34px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 150px;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #52489c;
+    border-radius: 50px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 2px 2px 2px #000000;
+    border: 2px solid #000000;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #52489c;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #52489c;
+    border-radius: 50px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 2px 2px 2px #000000;
+    border: 2px solid #000000;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #52489c;
+    border: 0px solid #000000;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #52489c;
+    border: 0px solid #000000;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 2px 2px 2px #000000;
+    border: 2px solid #000000;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #52489c;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #52489c;
+  }
+  

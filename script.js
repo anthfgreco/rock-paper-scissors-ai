@@ -51,7 +51,7 @@ function play_round(player_move) {
 
     predicted_player_move = predict_move(player_move);
     agent_move = convert_to_agent_move(predicted_player_move);
-    console.log("games played: " + games_played, "\ngames won: " + games_won, "\ngames lost: " + games_lost, "\ngames tied: " + games_tied);
+    //console.log("games played: " + games_played, "\ngames won: " + games_won, "\ngames lost: " + games_lost, "\ngames tied: " + games_tied);
 }
 
 function predict_move(player_move) {
@@ -77,8 +77,8 @@ function predict_move(player_move) {
 // Converts the predicted player move to agent move
 // Ex. if the neural net predicts the user will pick 1 (rock), the function will return 2 (paper)
 function convert_to_agent_move(user_move) {
-    console.log(user_move)
     user_move = Math.round(user_move);
+    console.log('next move prediction:\n', user_move);
     if (user_move == 1) {
         return 2;
     }
@@ -101,6 +101,7 @@ memory_size_slider.addEventListener("change", (event) => {
     memory_size = memory_size_slider.value;
 });
 
+
 // Keyboard functionality to play game
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
@@ -119,6 +120,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+
 // Allows user to click images to play game
 $( "#rock-div" ).click(function() {
     player_move = 1;
@@ -133,5 +135,11 @@ $( "#paper-div" ).click(function() {
 $( "#scissors-div" ).click(function() {
     player_move = 3;
     play_round(player_move);
+});
+
+
+// Disable dragging of images
+$(".image").each(function() {123
+    $(this).attr('draggable', false);
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

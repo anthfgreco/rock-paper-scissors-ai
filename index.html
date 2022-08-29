@@ -26,26 +26,26 @@
     </div>
 
     <div class="image-div" id="user-image-div">
-      <div class="image" id="rock-div">
-        <img src="img\rock.svg">
+      <div class="user-image-background container" id="rock-div">
+        <img class="image" src="img\rock.svg">
       </div>
-      <div class="image" id="paper-div">
-        <img src="img\paper.svg">
+      <div class="user-image-background" id="paper-div">
+        <img class="image" src="img\paper.svg">
       </div>
-      <div class="image" id="scissors-div">
-        <img src="img\scissors.svg">
+      <div class="user-image-background" id="scissors-div">
+        <img class="image" src="img\scissors.svg">
       </div>
     </div>
 
     <div class="image-div" id="agent-image-div">
-        <div class="image" id="agent-rock-div">
-          <img src="img\rock.svg">
+        <div class="agent-image-background" id="agent-rock-div">
+          <img class="image" src="img\rock.svg">
         </div>
-        <div class="image" id="agent-paper-div">
-          <img src="img\paper.svg">
+        <div class="agent-image-background" id="agent-paper-div">
+          <img class="image" src="img\paper.svg">
         </div>
-        <div class="image" id="agent-scissors-div">
-          <img src="img\scissors.svg">
+        <div class="agent-image-background" id="agent-scissors-div">
+          <img class="image" src="img\scissors.svg">
         </div>
     </div>
 
@@ -55,8 +55,8 @@
 
     <div id="slide-container">
       <p>AI Memory:</p>
-      <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value">
-      <output>10</output>
+      <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value + ' games' ">
+      <output>10 games</output>
     </div>
 
   </body>
