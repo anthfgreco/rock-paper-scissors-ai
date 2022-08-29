@@ -25,7 +25,7 @@
       <p id="games-tied-div">Games Tied: 0</p>
     </div>
 
-    <div id="image-div">
+    <div class="image-div" id="user-image-div">
       <div class="image" id="rock-div">
         <img src="img\rock.svg">
       </div>
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div id="image-div">
+    <div class="image-div" id="agent-image-div">
         <div class="image" id="agent-rock-div">
           <img src="img\rock.svg">
         </div>
@@ -51,6 +51,12 @@
 
     <div id="result-div">
       <p id="result-p"></p>
+    </div>
+
+    <div id="slide-container">
+      <p>AI Memory:</p>
+      <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value">
+      <output>10</output>
     </div>
 
   </body>
