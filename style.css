@@ -32,7 +32,10 @@ h1 {
 }
 
 p, output {
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
     font-size: 1.5em;
 }
 
