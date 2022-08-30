@@ -1,27 +1,60 @@
 :root {
     --html-background: #fff;
     --h1-color: #52489c;
-    --text: rgb(45, 45, 45);
+    --text: rgb(68, 68, 68);
     --image-background: #c9c6e4;
     --image-background-hover: #5e53b3;
+}
+
+* {
+  font-family: 'Open Sans', 'Ubuntu', sans-serif;
+}
+
+html {
+  display: flex;
+  justify-content: center;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
     background-color: var(--html-background);
     color: var(--text);
 }
 
+body {
+  width: 700px;
+}
+
 h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     text-align: center;
-    margin: 0;
+    margin: 12px 0;
     padding: 0;
     color: var(--h1-color);
+}
+
+p, output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  font-size: 1.1123em;
+  text-align: center;
+}
+
+#list-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#list-div p {
+  display: inline;
+  margin: 4px 0;
+  width: 100px;
+  text-align: left;
 }
 
 #stats-div {
@@ -31,13 +64,10 @@ h1 {
     justify-content: center;
 }
 
-p, output {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    font-size: 1.5em;
+#stats-div p {
+  margin: 10px 10px;
 }
+
 
 .image-div {
     height: 210px;
@@ -45,6 +75,7 @@ p, output {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    touch-action: manipulation;
 }
 
 .agent-image-background, .user-image-background {
@@ -69,14 +100,21 @@ p, output {
 .image {
     width: 100%;
     height: 100%;
+    touch-action: manipulation;
+    user-select: none;
+
 }
 
 #result-div {
-    height: 50px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+}
+
+#result-p {
+  font-weight: 600;
 }
 
 #slide-container {
@@ -89,7 +127,7 @@ p, output {
 input[type=range] {
     height: 34px;
     -webkit-appearance: none;
-    margin: 10px 0;
+    margin: 10px 10px;
     width: 150px;
   }
   input[type=range]:focus {
@@ -174,5 +212,4 @@ input[type=range] {
   }
   input[type=range]:focus::-ms-fill-upper {
     background: #52489c;
-  }
-  
+  }  
