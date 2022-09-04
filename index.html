@@ -53,19 +53,24 @@
         <div id="slide-div">
           <p>AI Memory:</p>
           <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value + ' games' ">
-          <output>10 games</output>
+          <output id="number-of-games">10 games</output>
         </div>
       </div>
 
       <div id="info-div">
-        <p>This is a rock paper scissors game that is played against an "artificial intelligence". The AI analyzes the players' patterns in order to predict a winning move.</p>
+        <p>Play the classic rock paper scissors game against an "artificial intelligence".</p>
+        
+        <p>The AI uses a <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">recurrent neural network</a> to analyze the players' patterns in order to predict a winning move.</p>
+        
         <p>Use the number keys or buttons to make a move:</p>
-
+        
         <div id="list-div">
           <p>(1) Rock</p>
           <p>(2) Paper</p>
           <p>(3) Scissors</p>
         </div>
+
+        <p></p>
       </div>
 
     </main> 

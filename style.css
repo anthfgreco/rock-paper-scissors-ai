@@ -33,37 +33,43 @@ main {
 
 #game-div, #info-div {
   max-width: 500px;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    color: var(--h1-color);
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px;
+  color: var(--h1-color);
 }
 
-p, output {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+p {
   margin: 10px 0px;
-  font-size: 1.1123em;
+  font-size: 1.15em;
   line-height: 1.5rem;
+}
+
+a {
+  color: #52489c;
+}
+
+a:hover {
+  color: #8275e2;
+}
+
+#number-of-games {
+  font-size: 1.15em;
+  width: 80px;
 }
 
 #list-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #list-div p {
-  display: inline;
-  margin: 4px 0;
-  width: 100px;
-  text-align: left;
+  margin: 4px 50px;
   line-height: 1rem;
 }
 
@@ -110,6 +116,9 @@ p, output {
 }
 
 #result-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   height: 20px;
 }
