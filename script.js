@@ -1,3 +1,5 @@
+// 1 = rock, 2 = paper, 3 = scissors
+
 var games_played = 0;
 var games_won = 0;
 var games_lost = 0;
@@ -5,9 +7,8 @@ var games_tied = 0;
 
 var memory_size = 10;
 var agent_move = 1;
-var net = new brain.recurrent.LSTMTimeStep();
-data = [1, 2];  
-// 1 = rock, 2 = paper, 3 = scissors
+var net = new brain.recurrent.RNNTimeStep();
+data = [1, 2];  // initial data
 
 function play_round(player_move) {
     // Shows which move the agent has chosen
@@ -30,18 +31,21 @@ function play_round(player_move) {
     // Rock paper scissors logic
     if (agent_move == player_move) {
         $( "#result-p" ).text("Tie!");
+        $( "#result-p" ).css('color', 'black');
         console.log('Tie!');
         games_tied++;
         $( "#games-tied-div" ).text("Games Tied: " + games_tied);
     }
     else if ((agent_move == 1 && player_move == 2) || (agent_move == 2 && player_move == 3) || (agent_move == 3 && player_move == 1)) {
         $( "#result-p" ).text("You win!");
+        $( "#result-p" ).css('color', 'green');
         console.log('You win!');
         games_won++;
         $( "#games-won-div" ).text("Games Won: " + games_won);
     }
     else {
         $( "#result-p" ).text("You lose!");
+        $( "#result-p" ).css('color', 'red');
         console.log('You lose!')
         games_lost++;;
         $( "#games-lost-div" ).text("Games Lost: " + games_lost);

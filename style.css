@@ -1,37 +1,46 @@
+@import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
+
 :root {
     --html-background: #fff;
     --h1-color: #52489c;
-    --text: rgb(68, 68, 68);
+    --text: #333;
     --image-background: #c9c6e4;
     --image-background-hover: #5e53b3;
 }
 
 * {
-  font-family: 'Open Sans', 'Ubuntu', sans-serif;
-}
-
-html {
-  display: flex;
-  justify-content: center;
+  font-family: "PT Serif", serif;
+  box-sizing: border-box;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     background-color: var(--html-background);
     color: var(--text);
 }
 
 body {
-  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#game-div, #info-div {
+  max-width: 500px;
+  padding: 20px;
 }
 
 h1 {
     font-size: 3em;
     font-weight: bold;
     text-align: center;
-    margin: 12px 0;
-    padding: 0;
+    margin: 0;
     color: var(--h1-color);
 }
 
@@ -41,7 +50,7 @@ p, output {
   justify-content: center;
   margin: 10px 0px;
   font-size: 1.1123em;
-  text-align: center;
+  line-height: 1.5rem;
 }
 
 #list-div {
@@ -55,11 +64,11 @@ p, output {
   margin: 4px 0;
   width: 100px;
   text-align: left;
+  line-height: 1rem;
 }
 
 #stats-div {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -68,21 +77,19 @@ p, output {
   margin: 10px 10px;
 }
 
-
 .image-div {
-    height: 210px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     touch-action: manipulation;
+    height: 150px;
 }
 
 .agent-image-background, .user-image-background {
     background-color: var(--image-background);
     width: 120px;
     height: 120px;
-    padding: 30px;
+    padding: 20px;
     margin: 15px;
     border-radius: 50%;
 }
@@ -91,33 +98,23 @@ p, output {
     display: none;
 }
 
-
 .user-image-background:hover {
     transition: .15s ease;
     background-color: var(--image-background-hover);
 }
 
 .image {
-    width: 100%;
-    height: 100%;
     touch-action: manipulation;
     user-select: none;
 
 }
 
-#result-div {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
 #result-p {
   font-weight: 600;
+  height: 20px;
 }
 
-#slide-container {
+#slide-div {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- JQuery -->
+    <!-- jquery -->
     <script src="lib/jquery-3.6.0.min.js"></script>
     <!-- brain.js -->
     <script src="lib/brain.js"></script>
@@ -15,58 +15,60 @@
 
     <h1>Rock Paper Scissors AI</h1>
 
-    <p>This is a rock paper scissors game that is played against an "artificial intelligence".</p>
+    <main>
 
-    <p>The AI analyzes the players' patterns in order to predict a winning move.</p>
-
-    <p>Use number keys or the buttons below to make a move:</p>
-
-
-    <div id="list-div">
-      <p>(1) Rock</p>
-      <p>(2) Paper</p>
-      <p>(3) Scissors</p>
-    </div>
-
-    <div id="stats-div">
-      <p id="games-won-div">Games Won: 0</p>
-      <p id="games-lost-div">Games Lost: 0</p>
-      <p id="games-tied-div">Games Tied: 0</p>
-    </div>
-
-    <div class="image-div" id="user-image-div">
-      <div class="user-image-background container" id="rock-div">
-        <img class="image" src="img\rock.svg">
-      </div>
-      <div class="user-image-background" id="paper-div">
-        <img class="image" src="img\paper.svg">
-      </div>
-      <div class="user-image-background" id="scissors-div">
-        <img class="image" src="img\scissors.svg">
-      </div>
-    </div>
-
-    <div class="image-div" id="agent-image-div">
-        <div class="agent-image-background" id="agent-rock-div">
-          <img class="image" src="img\rock.svg">
+      <div id="game-div">
+        <div id="stats-div">
+          <p id="games-won-div">Games Won: 0</p>
+          <p id="games-lost-div">Games Lost: 0</p>
+          <p id="games-tied-div">Games Tied: 0</p>
         </div>
-        <div class="agent-image-background" id="agent-paper-div">
-          <img class="image" src="img\paper.svg">
-        </div>
-        <div class="agent-image-background" id="agent-scissors-div">
-          <img class="image" src="img\scissors.svg">
-        </div>
-    </div>
 
-    <div id="result-div">
-      <p id="result-p"></p>
-    </div>
+        <div class="image-div" id="user-image-div">
+          <div class="user-image-background container" id="rock-div">
+            <img class="image" src="img\rock.svg">
+          </div>
+          <div class="user-image-background" id="paper-div">
+            <img class="image" src="img\paper.svg">
+          </div>
+          <div class="user-image-background" id="scissors-div">
+            <img class="image" src="img\scissors.svg">
+          </div>
+        </div>
 
-    <div id="slide-container">
-      <p>AI Memory:</p>
-      <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value + ' games' ">
-      <output>10 games</output>
-    </div>
+        <div class="image-div" id="agent-image-div">
+            <div class="agent-image-background" id="agent-rock-div">
+              <img class="image" src="img\rock.svg">
+            </div>
+            <div class="agent-image-background" id="agent-paper-div">
+              <img class="image" src="img\paper.svg">
+            </div>
+            <div class="agent-image-background" id="agent-scissors-div">
+              <img class="image" src="img\scissors.svg">
+            </div>
+        </div>
+
+        <p id="result-p"></p>
+        
+        <div id="slide-div">
+          <p>AI Memory:</p>
+          <input id="memory-size-slider" type="range" min="2" max="20" value="10" oninput="this.nextElementSibling.value = this.value + ' games' ">
+          <output>10 games</output>
+        </div>
+      </div>
+
+      <div id="info-div">
+        <p>This is a rock paper scissors game that is played against an "artificial intelligence". The AI analyzes the players' patterns in order to predict a winning move.</p>
+        <p>Use the number keys or buttons to make a move:</p>
+
+        <div id="list-div">
+          <p>(1) Rock</p>
+          <p>(2) Paper</p>
+          <p>(3) Scissors</p>
+        </div>
+      </div>
+
+    </main> 
 
   </body>
 
