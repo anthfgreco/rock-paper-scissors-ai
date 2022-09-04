@@ -16,6 +16,8 @@
 html, body {
     background-color: var(--html-background);
     color: var(--text);
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -23,6 +25,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0px;
+  color: var(--h1-color);
 }
 
 main {
@@ -36,16 +46,15 @@ main {
   padding: 0px 20px;
 }
 
-h1 {
-  font-size: 3em;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 0px;
-  color: var(--h1-color);
+#info-div p {
+  margin: 25px 0 0 0;
+}
+
+#first-p {
+  margin: 0 !important;
 }
 
 p {
-  margin: 10px 0px;
   font-size: 1.15em;
   line-height: 1.5rem;
 }
@@ -66,6 +75,7 @@ a:hover {
 #list-div {
   display: flex;
   flex-direction: column;
+  margin-top: 5px;
 }
 
 #list-div p {
@@ -80,7 +90,7 @@ a:hover {
 }
 
 #stats-div p {
-  margin: 10px 10px;
+  margin: 0 10px 10px 10px;
 }
 
 .image-div {
@@ -130,6 +140,8 @@ a:hover {
     flex-direction: row;
 }
 
+
+/* slider styling made with https://www.cssportal.com/style-input-range/ */
 input[type=range] {
     height: 34px;
     -webkit-appearance: none;
