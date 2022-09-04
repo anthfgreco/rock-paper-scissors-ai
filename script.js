@@ -34,21 +34,21 @@ function play_round(player_move) {
         $( "#result-p" ).css('color', 'black');
         console.log('Tie!');
         games_tied++;
-        $( "#games-tied-div" ).text("Games Tied: " + games_tied);
+        $( "#games-tied-div" ).text(games_tied);
     }
     else if ((agent_move == 1 && player_move == 2) || (agent_move == 2 && player_move == 3) || (agent_move == 3 && player_move == 1)) {
         $( "#result-p" ).text("You win!");
         $( "#result-p" ).css('color', 'green');
         console.log('You win!');
         games_won++;
-        $( "#games-won-div" ).text("Games Won: " + games_won);
+        $( "#games-won-div" ).text(games_won);
     }
     else {
         $( "#result-p" ).text("You lose!");
         $( "#result-p" ).css('color', 'red');
         console.log('You lose!')
         games_lost++;;
-        $( "#games-lost-div" ).text("Games Lost: " + games_lost);
+        $( "#games-lost-div" ).text(games_lost);
     }
 
     games_played++;

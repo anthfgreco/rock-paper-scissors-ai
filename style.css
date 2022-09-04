@@ -54,7 +54,7 @@ main {
   margin: 0 !important;
 }
 
-p {
+p, output {
   font-size: 1.15em;
   line-height: 1.5rem;
 }
@@ -90,7 +90,12 @@ a:hover {
 }
 
 #stats-div p {
-  margin: 0 10px 10px 10px;
+  margin: 15px 0 15px 10px;
+}
+
+#stats-div output {
+  margin: 15px 0 15px 3px;
+  width: 20px;
 }
 
 .image-div {
@@ -101,17 +106,26 @@ a:hover {
     height: 150px;
 }
 
-.agent-image-background, .user-image-background {
+.user-image-background {
     background-color: var(--image-background);
+    border-radius: 50%;
+    /*
     width: 120px;
-    height: 120px;
     padding: 20px;
     margin: 15px;
-    border-radius: 50%;
+    */
+    width: 33%;
+    padding: 4.5%;
+    margin: 2%;
 }
 
 .agent-image-background {
-    display: none;
+  background-color: var(--image-background);
+  border-radius: 50%;
+  display: none;
+  width: 30%;
+  padding: 4.5%;
+  margin: 2%;
 }
 
 .user-image-background:hover {
